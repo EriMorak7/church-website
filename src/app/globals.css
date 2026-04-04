@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0A0A0A;
+  --color-secondary: #B9D9EB;
+  --color-accent: #5DA7DB;
+  /* Accent Blue */
+  --color-text-main: #B9D9EB;
+  --color-text-heading: #FCF8F3;
+  --color-bg-muted: #1A1A1A;
+
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+}
+
+
+:root {
+  --background: #0A0A0A;
+  --foreground: #FCF8F3;
+}
+
+/* Custom utilities if needed */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes pulse-slow {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 10s ease-in-out infinite;
+}
+
+body {
+  background-color: var(--color-primary);
+  color: var(--color-text-main);
+  overflow-x: hidden;
+}
