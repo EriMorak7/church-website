@@ -129,7 +129,7 @@ export function Navbar() {
 
             {/* Mobile Navigation Overlay */}
             {isOpen && (
-                <div className="lg:hidden fixed inset-x-0 bottom-0 top-full bg-primary/98 backdrop-blur-2xl z-40 p-8 border-t border-white/5 animate-in fade-in slide-in-from-top-4 duration-500 flex flex-col h-[calc(100vh-100%)]">
+                <div className="lg:hidden absolute inset-x-0 top-full bg-primary/98 backdrop-blur-2xl z-40 p-8 border-t border-white/5 animate-in fade-in slide-in-from-top-4 duration-500 flex flex-col h-[calc(100vh-100%)]">
                     <div className="flex flex-col space-y-6 overflow-y-auto">
                         {navLinks.map((link) => (
                             <Link
