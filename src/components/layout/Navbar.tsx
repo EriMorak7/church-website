@@ -12,7 +12,9 @@ import { cn } from "@/lib/utils";
 const navLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
+    { name: "Plan A Visit", href: "/plan-visit" },
     { name: "Sermons", href: "/sermons" },
+    { name: "Events", href: "/events" },
     { name: "Ministries", href: "/ministries" },
     { name: "Contact", href: "/contact" },
 ];
@@ -38,6 +40,18 @@ export function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, [isHomePage]);
 
+    // Handle scroll lock when mobile menu is open
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "unset";
+        }
+        return () => {
+            document.body.style.overflow = "unset";
+        };
+    }, [isOpen]);
+
     const useTransparentStyle = isHomePage && !isScrolled;
 
     return (
@@ -54,7 +68,7 @@ export function Navbar() {
                     {/* Logo */}
                     <Link
                         href="/"
-                        className="transition-all duration-300 hover:opacity-80 active:scale-95"
+                        className="transition-all duration-300 hover:opacity-80 active:scale-95 shrink-0"
                     >
                         <div className="relative h-10 w-40 md:h-12 md:w-48">
                             <Image
@@ -68,13 +82,13 @@ export function Navbar() {
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden lg:flex items-center space-x-12">
+                    <div className="hidden lg:flex items-center space-x-8 xl:space-x-10">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.name}
                                 href={link.href}
                                 className={cn(
-                                    "text-sm font-black uppercase tracking-[0.2em] transition-all duration-300 relative group",
+                                    "text-[10px] xl:text-xs font-black uppercase tracking-[0.2em] transition-all duration-300 relative group whitespace-nowrap",
                                     pathname === link.href
                                         ? "text-accent"
                                         : "text-white/70 hover:text-white"
@@ -90,7 +104,7 @@ export function Navbar() {
                     </div>
 
                     {/* Actions */}
-                    <div className="hidden lg:flex items-center space-x-6">
+                    <div className="hidden lg:flex items-center space-x-6 shrink-0">
                         <Link href="/give">
                             <Button
                                 variant="primary"
@@ -115,14 +129,14 @@ export function Navbar() {
 
             {/* Mobile Navigation Overlay */}
             {isOpen && (
-                <div className="mobile-menu lg:hidden fixed inset-0 top-[88px] bg-primary/98 backdrop-blur-2xl z-50 p-8 animate-in fade-in zoom-in-95 duration-500">
-                    <div className="flex flex-col space-y-8">
+                <div className="lg:hidden fixed inset-x-0 bottom-0 top-full bg-primary/98 backdrop-blur-2xl z-40 p-8 border-t border-white/5 animate-in fade-in slide-in-from-top-4 duration-500 flex flex-col h-[calc(100vh-100%)]">
+                    <div className="flex flex-col space-y-6 overflow-y-auto">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.name}
                                 href={link.href}
                                 className={cn(
-                                    "text-3xl font-black uppercase tracking-tighter transition-colors",
+                                    "text-2xl font-black uppercase tracking-tighter transition-colors",
                                     pathname === link.href
                                         ? "text-accent"
                                         : "text-white/70 hover:text-white"
@@ -132,9 +146,9 @@ export function Navbar() {
                                 {link.name}
                             </Link>
                         ))}
-                        <div className="pt-12 flex flex-col space-y-4 border-t border-white/10">
+                        <div className="pt-8 flex flex-col space-y-4 border-t border-white/10">
                             <Link href="/give" onClick={() => setIsOpen(false)}>
-                                <Button variant="primary" className="w-full py-8 text-xs font-black uppercase tracking-widest rounded-none">
+                                <Button variant="primary" className="w-full py-6 text-sm font-black uppercase tracking-widest rounded-none">
                                     Give Online
                                 </Button>
                             </Link>
@@ -143,5 +157,6 @@ export function Navbar() {
                 </div>
             )}
         </nav>
+
     );
 }
