@@ -31,7 +31,7 @@ export default function RootLayout({
         className={cn(
           inter.variable,
           playfair.variable,
-          "antialiased font-sans bg-gray-50 text-text-main"
+          "antialiased font-sans bg-primary text-white"
         )}
       >
         {children}

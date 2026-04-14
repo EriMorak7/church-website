@@ -1,9 +1,9 @@
 export const leadership = [
     {
-        name: "Chris & Cara Railey",
+        name: "Rev James & Pst Mrs Adesola Morakinyo",
         role: "Lead Pastors",
-        bio: "Chris and Cara Railey are the Lead Pastors of Christ Heritage Ministries in Red Oak, Texas. They’ve been in pastoral ministry for over 20 years. Chris and Cara have a rich history with Christ Heritage Ministries, going back to 2007 when they were the first directors of Christ Heritage College.",
-        image: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop", // Placeholder image
+        bio: "Rev James Morakinyo and Pst Mrs Adesola Morakinyo are the Lead Pastors of Christ Heritage Tabernacle Ministries in Ibadan, Oyo. They’ve been in pastoral ministry for over 20 years. They have a rich history with Christ Heritage Tabernacle Ministries, going back to 2007 when they were the first directors of Christ Heritage College.",
+        image: "/images/Lead-pastors.jpg",
     },
     {
         name: "Sarah Jenkins",
@@ -61,7 +61,7 @@ export const values = [
 export const sermons = [
     {
         id: 1,
-        title: "Christ Heritage Ministries Sunday Service January 18th 2026",
+        title: "Christ Heritage Tabernacle Ministries Sunday Service January 18th 2026",
         series: "Proverbs: Life Applied",
         speaker: "Rev. James Morakinyo",
         topic: "Wisdom",
@@ -123,11 +123,11 @@ export const sermons = [
 ];
 
 export const churchInfo = {
-    name: "Christ Heritage Ministries",
-    address: "777 South I-35 East Service Rd, Red Oak, TX 75154",
+    name: "Christ Heritage Tabernacle Ministries",
+    address: "Christ Heritage Ministries, Sango Eleyele Road, Eleyele, Ibadan, Oyo",
     phone: "(972) 937-6741",
     email: "info@christheritage.org",
-    youtubeChannel: "https://www.youtube.com/@ChristHeritage",
+    youtubeChannel: "https://www.youtube.com/@CHTMIbadanHQ",
 };
 
 
@@ -151,7 +151,7 @@ export const events = [
         displayDate: "Aug 22, 2026",
         time: "9:00 AM - 10:30 AM",
         location: "Room 204",
-        description: "Interested in joining Grace Community? Come learn about our history, beliefs, and mission. Childcare is provided.",
+        description: "Interested in joining Christ Heritage? Come learn about our history, beliefs, and mission. Childcare is provided.",
         image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop",
     },
     {

@@ -1,39 +1,62 @@
 import Link from "next/link";
 import { churchInfo } from "@/lib/data";
+import { ArrowRight } from "lucide-react";
 
 export function ServiceTimes() {
     return (
-        <section className="bg-primary py-24 px-6 md:px-10 border-y border-bg-muted">
+        <section className="bg-surface py-16 px-6 md:px-10 border-y border-white/5 relative overflow-hidden">
+            {/* Background ambient glow */}
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
+            
             <div className="container mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 relative">
-                    {/* Vertical Divider for Desktop */}
-                    <div className="hidden md:block absolute left-1/2 top-4 bottom-4 w-px bg-white/10" />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-24 md:gap-32 relative">
+                    {/* Artistic Vertical Divider */}
+                    <div className="hidden md:flex absolute left-1/2 top-0 bottom-0 -translate-x-1/2 flex-col items-center justify-between py-4">
+                        <div className="w-[1px] h-full bg-gradient-to-b from-transparent via-accent/20 to-transparent animate-shimmer" />
+                        <div className="w-2 h-2 rounded-full border border-accent/40 bg-accent/20" />
+                        <div className="w-[1px] h-full bg-gradient-to-t from-transparent via-accent/20 to-transparent" />
+                    </div>
 
-                    <div className="space-y-10">
-                        <div className="space-y-6">
-                            <h2 className="text-xs font-black uppercase tracking-[0.4em] text-accent">Service Times</h2>
-                            <div className="space-y-4">
-                                <p className="font-sans text-4xl md:text-6xl font-black uppercase tracking-tighter text-heading leading-[0.9]">
-                                    Sundays at <br /> 8:30, 10, <br /> & 11:30 AM
-                                </p>
-                                <p className="font-sans text-xl md:text-2xl font-black uppercase tracking-tighter text-secondary/80 leading-none">
-                                    Wednesdays at 7 PM
-                                </p>
+                    <div className="space-y-12">
+                        <div className="space-y-8">
+                            <div className="flex items-center gap-4">
+                                <h2 className="text-sm font-black uppercase tracking-[0.5em] text-accent">Gathering Times</h2>
+                                <div className="flex-1 h-[1px] bg-white/5" />
+                            </div>
+                            <div className="space-y-8">
+                                <div className="space-y-2">
+                                    <p className="text-sm font-bold uppercase tracking-widest text-white/40">Sunday Services</p>
+                                    <p className="font-sans text-6xl md:text-8xl font-black uppercase tracking-tighter text-white leading-[0.85]">
+                                        Sundays at 8:30 AM
+                                    </p>
+                                </div>
+                                <div className="space-y-2">
+                                    <p className="text-sm font-bold uppercase tracking-widest text-white/40">Midweek Gathering</p>
+                                    <p className="font-sans text-2xl md:text-3xl font-black uppercase tracking-tighter text-white/80 leading-tight">
+                                        Mondays at 5:00 PM <br /> Wednesdays at 5:30 PM
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div className="space-y-10">
-                        <div className="space-y-6">
-                            <h2 className="text-xs font-black uppercase tracking-[0.4em] text-accent">Location</h2>
-                            <div className="space-y-6">
-                                <p className="font-sans text-xl md:text-3xl font-black uppercase tracking-tighter text-heading leading-tight max-w-sm">
+                    <div className="space-y-12">
+                        <div className="space-y-8">
+                            <div className="flex items-center gap-4">
+                                <h2 className="text-sm font-black uppercase tracking-[0.5em] text-accent">Our Location</h2>
+                                <div className="flex-1 h-[1px] bg-white/5" />
+                            </div>
+                            <div className="space-y-8">
+                                <p className="font-sans text-2xl md:text-4xl font-black uppercase tracking-tighter text-white/80 leading-tight max-w-sm">
                                     {churchInfo.address}
                                 </p>
-                                <div className="pt-2">
-                                    <Link href="/visit" className="group inline-flex items-center text-xs font-black uppercase tracking-[0.2em] text-heading hover:text-accent transition-all duration-300">
+                                <div className="pt-6">
+                                    <Link 
+                                        href="/plan-visit" 
+                                        className="group inline-flex items-center text-sm font-black uppercase tracking-[0.3em] text-accent/80 hover:text-accent transition-all duration-300"
+                                    >
                                         Plan Your Visit
-                                        <span className="ml-2 transform group-hover:translate-x-2 transition-transform">&rarr;</span>
+                                        <ArrowRight className="ml-4 h-4 w-4 transition-transform group-hover:translate-x-3" />
                                     </Link>
                                 </div>
                             </div>
@@ -44,4 +67,3 @@ export function ServiceTimes() {
         </section>
     );
 }
-

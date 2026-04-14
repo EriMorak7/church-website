@@ -18,10 +18,10 @@ export const buttonVariants = ({
     className?: string
 }) => {
     const variants = {
-        primary: "bg-secondary text-primary hover:bg-secondary/90 shadow-sm uppercase tracking-wider font-bold",
-        secondary: "bg-accent text-primary hover:bg-accent/90 shadow-sm uppercase tracking-wider font-bold",
-        outline: "border-2 border-secondary text-secondary hover:bg-secondary hover:text-primary uppercase tracking-wider font-bold",
-        ghost: "text-secondary hover:bg-secondary/5 hover:text-secondary",
+        primary: "bg-accent text-primary hover:bg-accent-hover shadow-lg shadow-accent/20 uppercase tracking-wider font-bold transition-all duration-300 hover:shadow-accent/30",
+        secondary: "bg-white/10 text-white border border-white/10 hover:bg-white/15 hover:border-accent/30 backdrop-blur-sm uppercase tracking-wider font-bold transition-all duration-300",
+        outline: "border border-accent/40 text-accent hover:bg-accent/10 hover:border-accent uppercase tracking-wider font-bold transition-all duration-300",
+        ghost: "text-white/80 hover:text-white hover:bg-white/5 transition-all duration-300",
     };
 
     const sizes = {
@@ -31,7 +31,7 @@ export const buttonVariants = ({
     };
 
     return cn(
-        "inline-flex items-center justify-center rounded-none transition-all duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-secondary disabled:pointer-events-none disabled:opacity-50",
+        "inline-flex items-center justify-center rounded-none transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent/50 disabled:pointer-events-none disabled:opacity-50",
         variants[variant],
         sizes[size],
         className

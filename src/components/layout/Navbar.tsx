@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, Search } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { churchInfo } from "@/lib/data";
 import { cn } from "@/lib/utils";
@@ -29,26 +30,23 @@ export function Navbar() {
 
         if (isHomePage) {
             window.addEventListener("scroll", handleScroll);
-            // Initialize scroll state
             handleScroll();
         } else {
-            setIsScrolled(true); // Always "scrolled" style on other pages
+            setIsScrolled(true);
         }
 
         return () => window.removeEventListener("scroll", handleScroll);
     }, [isHomePage]);
 
-    // Determine if we should use the transparent/light style
-    // We only use it on the homepage when NOT scrolled
     const useTransparentStyle = isHomePage && !isScrolled;
 
     return (
         <nav
             className={cn(
-                "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
+                "fixed top-0 left-0 right-0 z-50 transition-all duration-700",
                 useTransparentStyle
-                    ? "bg-transparent py-6"
-                    : "bg-primary border-b border-bg-muted py-4 shadow-xl"
+                    ? "bg-transparent py-8"
+                    : "bg-primary/80 backdrop-blur-xl border-b border-white/5 py-4 shadow-2xl shadow-black/50"
             )}
         >
             <div className="container mx-auto px-6 md:px-10">
@@ -56,26 +54,37 @@ export function Navbar() {
                     {/* Logo */}
                     <Link
                         href="/"
-                        className={cn(
-                            "font-sans text-xl md:text-2xl font-black tracking-tighter transition-colors uppercase",
-                            useTransparentStyle ? "text-heading" : "text-secondary"
-                        )}
+                        className="transition-all duration-300 hover:opacity-80 active:scale-95"
                     >
-                        {churchInfo.name.split(' ').map(word => word[0]).join('')}
+                        <div className="relative h-10 w-40 md:h-12 md:w-48">
+                            <Image
+                                src="/images/logo.png"
+                                alt={churchInfo.name}
+                                fill
+                                className="object-contain object-left"
+                                priority
+                            />
+                        </div>
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden lg:flex items-center space-x-10">
+                    <div className="hidden lg:flex items-center space-x-12">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.name}
                                 href={link.href}
                                 className={cn(
-                                    "text-xs font-bold uppercase tracking-widest transition-colors hover:text-accent",
-                                    useTransparentStyle ? "text-heading/90" : "text-secondary"
+                                    "text-sm font-black uppercase tracking-[0.2em] transition-all duration-300 relative group",
+                                    pathname === link.href
+                                        ? "text-accent"
+                                        : "text-white/70 hover:text-white"
                                 )}
                             >
                                 {link.name}
+                                <span className={cn(
+                                    "absolute -bottom-1 left-0 h-[1px] bg-accent transition-all duration-300",
+                                    pathname === link.href ? "w-full" : "w-0 group-hover:w-full"
+                                )} />
                             </Link>
                         ))}
                     </div>
@@ -83,7 +92,11 @@ export function Navbar() {
                     {/* Actions */}
                     <div className="hidden lg:flex items-center space-x-6">
                         <Link href="/give">
-                            <Button variant={useTransparentStyle ? "outline" : "primary"} size="sm" className={cn(useTransparentStyle && "text-white border-white hover:bg-white hover:text-secondary")}>
+                            <Button
+                                variant="primary"
+                                size="sm"
+                                className="px-8 rounded-none uppercase tracking-widest text-sm font-black"
+                            >
                                 Give
                             </Button>
                         </Link>
@@ -91,10 +104,7 @@ export function Navbar() {
 
                     {/* Mobile Menu Button */}
                     <button
-                        className={cn(
-                            "lg:hidden p-2 transition-colors",
-                            useTransparentStyle ? "text-heading" : "text-secondary"
-                        )}
+                        className="lg:hidden p-2 text-white/80 hover:text-white transition-colors"
                         onClick={() => setIsOpen(!isOpen)}
                         aria-label="Toggle menu"
                     >
@@ -105,21 +115,26 @@ export function Navbar() {
 
             {/* Mobile Navigation Overlay */}
             {isOpen && (
-                <div className="mobile-menu lg:hidden fixed inset-0 top-[88px] bg-primary z-50 p-8 animate-in fade-in duration-300">
+                <div className="mobile-menu lg:hidden fixed inset-0 top-[88px] bg-primary/98 backdrop-blur-2xl z-50 p-8 animate-in fade-in zoom-in-95 duration-500">
                     <div className="flex flex-col space-y-8">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className="text-2xl font-black uppercase tracking-tighter text-main hover:text-accent"
+                                className={cn(
+                                    "text-3xl font-black uppercase tracking-tighter transition-colors",
+                                    pathname === link.href
+                                        ? "text-accent"
+                                        : "text-white/70 hover:text-white"
+                                )}
                                 onClick={() => setIsOpen(false)}
                             >
                                 {link.name}
                             </Link>
                         ))}
-                        <div className="pt-8 flex flex-col space-y-4">
+                        <div className="pt-12 flex flex-col space-y-4 border-t border-white/10">
                             <Link href="/give" onClick={() => setIsOpen(false)}>
-                                <Button variant="primary" className="w-full py-6 text-lg">
+                                <Button variant="primary" className="w-full py-8 text-xs font-black uppercase tracking-widest rounded-none">
                                     Give Online
                                 </Button>
                             </Link>
@@ -130,4 +145,3 @@ export function Navbar() {
         </nav>
     );
 }
-
