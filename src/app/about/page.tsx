@@ -26,7 +26,7 @@ export default function AboutPage() {
                             Our Story
                         </h1>
                         <p className="text-xl md:text-2xl font-medium text-white/60 max-w-2xl mx-auto leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500">
-                            A community where faith meets real life. Dedicated to loving God and serving our neighbors since 2005.
+                            A community where faith meets real life. Dedicated to loving God and serving our neighbors since 2001.
                         </p>
                     </div>
                 </section>

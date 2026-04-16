@@ -187,6 +187,39 @@ export const events = [
         description: "We're partnering with several local non-profits for a day of service across our city. Sign up in the lobby!",
         image: "https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=2070&auto=format&fit=crop",
     },
+    {
+        id: 6,
+        title: "Annual Discipleship and Leadership Conference",
+        category: "Conference",
+        date: "2026-10-15",
+        displayDate: "Oct 15-18, 2026",
+        time: "9:00 AM - 8:00 PM",
+        location: "Main Sanctuary & Conference Hall",
+        description: "A transformative gathering focused on spiritual maturity, leadership excellence, and regional impact. Featuring guest speakers and specialized workshops.",
+        image: "https://images.unsplash.com/photo-1475721027185-4038e9253457?q=80&w=2070&auto=format&fit=crop",
+    },
+    {
+        id: 7,
+        title: "Annual Jehovah Convention",
+        category: "Convention",
+        date: "2026-11-20",
+        displayDate: "Nov 20-22, 2026",
+        time: "8:00 AM - 5:00 PM",
+        location: "City Exhibition Center",
+        description: "An annual sacred assembly for deep spiritual renewal, prophetic worship, and communal prayer. A time of divine encounter for the entire church family.",
+        image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069&auto=format&fit=crop",
+    },
+    {
+        id: 8,
+        title: "Church Anniversary Celebration",
+        category: "Celebration",
+        date: "2026-09-25",
+        displayDate: "Sep 25, 2026",
+        time: "10:00 AM - 2:00 PM",
+        location: "Main Sanctuary",
+        description: "Join us as we celebrate God's unwavering faithfulness through another year of ministry. A special service followed by a communal feast.",
+        image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=2070&auto=format&fit=crop",
+    },
 ];
 
 export const ministries = [
@@ -209,5 +242,15 @@ export const ministries = [
         title: "Outreach",
         description: "Sharing the love of Christ with our local community and the world.",
         icon: "Heart",
+    },
+    {
+        title: "Discipleship",
+        description: "Equipping believers with the mentorship and biblical tools needed for spiritual maturity and leadership.",
+        icon: "BookOpen",
+    },
+    {
+        title: "Evangelism",
+        description: "Commissioned to share the transformative message of the Gospel with our city and the nations.",
+        icon: "Globe",
     },
 ];

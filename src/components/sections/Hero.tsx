@@ -63,7 +63,7 @@ export function Hero() {
 
                     <div className="space-y-6 text-center">
                         <h1 className="font-nunito tracking-tighter uppercase text-white mx-auto max-w-5xl text-balance">
-                            <span className="block text-base md:text-xl lg:text-2xl font-black text-accent mb-4 tracking-[0.3em] opacity-90 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+                            <span className="block text-lg sm:text-2xl md:text-3xl lg:text-4xl font-black text-accent mb-4 tracking-[0.3em] opacity-90 animate-in fade-in slide-in-from-bottom-4 duration-1000">
                                 {line1.displayedText}
                                 {!line1.isComplete && <span className="inline-block w-[2px] h-[0.8em] bg-accent ml-1 animate-pulse" />}
                             </span>

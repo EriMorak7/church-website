@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ministries } from "@/lib/data";
-import { Baby, Users, Music, Heart, HelpCircle, ChevronRight } from "lucide-react";
+import { Baby, Users, Music, Heart, HelpCircle, ChevronRight, BookOpen, Globe } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
@@ -11,6 +11,8 @@ const iconMap: Record<string, any> = {
     Users: Users,
     Music: Music,
     Heart: Heart,
+    BookOpen: BookOpen,
+    Globe: Globe,
 };
 
 export default function MinistriesPage() {
