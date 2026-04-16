@@ -10,15 +10,16 @@ export default function PlanVisitPage() {
 
             <main className="flex-1 pt-24">
                 {/* Hero Section */}
-                <section className="bg-surface py-20 border-b border-white/5 relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[150px] pointer-events-none" />
-                    <div className="container mx-auto px-6 md:px-10 relative z-10">
+                <section className="bg-surface py-24 border-b border-white/5 relative overflow-hidden film-grain">
+                    <div className="absolute inset-0 cinematic-gradient z-10" />
+                    <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[150px] pointer-events-none z-10" />
+                    <div className="container mx-auto px-6 md:px-10 relative z-20">
                         <div className="max-w-3xl">
-                            <h2 className="text-xs font-black uppercase tracking-[0.4em] text-accent mb-4">Plan Your Visit</h2>
-                            <h1 className="font-sans text-5xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6 leading-[0.9]">
+                            <h2 className="text-xs font-black uppercase tracking-[0.4em] text-accent mb-4 animate-in fade-in slide-in-from-bottom-4 duration-1000">Plan Your Visit</h2>
+                            <h1 className="font-sans text-4xl md:text-6xl font-black uppercase tracking-tighter text-white mb-6 leading-[0.9] animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
                                 We&apos;re Expecting You!
                             </h1>
-                            <p className="text-xl text-white/50 leading-relaxed">
+                            <p className="text-xl text-white/50 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500">
                                 Visiting a new church can be intimidating. We want to make your first experience
                                 at Christ Heritage Tabernacle Ministries as welcoming and easy as possible.
                             </p>
@@ -29,9 +30,9 @@ export default function PlanVisitPage() {
                 {/* What to Expect */}
                 <section className="py-20 border-b border-white/5">
                     <div className="container mx-auto px-6 md:px-10">
-                        <div className="text-center mb-16">
+                        <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-8 duration-1000">
                             <h2 className="text-xs font-black uppercase tracking-[0.4em] text-accent mb-4">What to Expect</h2>
-                            <h3 className="font-sans text-4xl md:text-6xl font-black uppercase tracking-tighter text-white">Your First Visit</h3>
+                            <h3 className="font-sans text-4xl md:text-5xl font-black uppercase tracking-tighter text-white">Your First Visit</h3>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             {[

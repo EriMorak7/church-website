@@ -7,10 +7,11 @@ export function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="bg-primary pt-32 pb-16 px-6 md:px-10 border-t border-white/5 relative overflow-hidden">
+        <footer className="bg-primary pt-32 pb-16 px-6 md:px-10 border-t border-white/5 relative overflow-hidden film-grain">
             {/* Ambient Gold Glow */}
-            <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[150px] pointer-events-none" />
-            <div className="absolute top-1/4 left-0 w-[400px] h-[400px] bg-accent/3 rounded-full blur-[120px] pointer-events-none" />
+            <div className="absolute inset-0 cinematic-gradient z-0" />
+            <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[150px] pointer-events-none z-10" />
+            <div className="absolute top-1/4 left-0 w-[400px] h-[400px] bg-accent/3 rounded-full blur-[120px] pointer-events-none z-10" />
 
             <div className="container mx-auto relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20">

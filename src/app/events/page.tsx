@@ -25,12 +25,13 @@ export default function EventsPage() {
 
             <main className="flex-1 pt-24">
                 {/* Page Header */}
-                <section className="bg-surface py-16 border-b border-white/5 relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
-                    <div className="container mx-auto px-6 md:px-10 relative z-10">
-                        <h2 className="text-xs font-black uppercase tracking-[0.4em] text-accent mb-4">Events</h2>
-                        <h1 className="font-sans text-5xl md:text-7xl font-black uppercase tracking-tighter text-white mb-4 leading-[0.9]">Upcoming Events</h1>
-                        <p className="text-white/50 text-lg max-w-2xl">
+                <section className="bg-surface py-24 border-b border-white/5 relative overflow-hidden film-grain">
+                    <div className="absolute inset-0 cinematic-gradient z-10" />
+                    <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-accent/5 rounded-full blur-[150px] pointer-events-none z-10" />
+                    <div className="container mx-auto px-6 md:px-10 relative z-20">
+                        <h2 className="text-xs font-black uppercase tracking-[0.4em] text-accent mb-4 animate-in fade-in slide-in-from-bottom-4 duration-1000">Events</h2>
+                        <h1 className="font-sans text-4xl md:text-6xl font-black uppercase tracking-tighter text-white mb-4 leading-[0.9] animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">Upcoming Events</h1>
+                        <p className="text-white/50 text-lg max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500">
                             There&apos;s always something happening at Christ Heritage. Find a way to get connected and grow with us.
                         </p>
                     </div>

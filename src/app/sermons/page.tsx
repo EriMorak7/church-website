@@ -68,9 +68,10 @@ export default function SermonsPage() {
 
             <main className="flex-1 pt-24">
                 {/* Featured Latest Sermon */}
-                <section className="bg-surface pt-16 pb-32 px-6 md:px-10 relative overflow-hidden border-b border-white/5">
+                <section className="bg-surface pt-24 pb-32 px-6 md:px-10 relative overflow-hidden border-b border-white/5 film-grain">
                     {/* Ambient Glow */}
-                    <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] bg-accent/8 rounded-full blur-[120px] pointer-events-none" />
+                    <div className="absolute inset-0 cinematic-gradient z-10" />
+                    <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[150px] pointer-events-none z-10" />
 
                     <div className="container mx-auto relative z-10">
                         {loading ? (
@@ -117,7 +118,7 @@ export default function SermonsPage() {
                                     </a>
                                 </div>
                                 <div className="lg:w-5/12 space-y-10">
-                                    <div className="space-y-4">
+                                    <div className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-1000">
                                         <h2 className="text-xs font-black uppercase tracking-[0.4em] text-accent">Latest Message</h2>
                                         <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-[0.9] text-white">
                                             {latestSermon.title}
@@ -146,9 +147,9 @@ export default function SermonsPage() {
                 <section className="py-16 bg-primary px-6 md:px-10 border-t border-white/5">
                     <div className="container mx-auto">
                         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-12 mb-24">
-                            <div className="space-y-4">
+                            <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-1000">
                                 <h2 className="text-xs font-black uppercase tracking-[0.4em] text-accent">Archive</h2>
-                                <h3 className="text-5xl md:text-6xl font-black uppercase tracking-tighter text-white leading-[0.9]">
+                                <h3 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-white leading-[0.9]">
                                     Browse All <br /> Messages
                                 </h3>
                             </div>

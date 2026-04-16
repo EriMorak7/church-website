@@ -13,6 +13,13 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
 });
 
+import { Nunito } from "next/font/google";
+
+const nunito = Nunito({
+  variable: "--font-nunito",
+  subsets: ["latin"],
+});
+
 import { churchInfo } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -31,7 +38,8 @@ export default function RootLayout({
         className={cn(
           inter.variable,
           playfair.variable,
-          "antialiased font-sans bg-primary text-white"
+          nunito.variable,
+          "antialiased font-sans bg-primary text-white overflow-x-hidden"
         )}
       >
         {children}

@@ -10,19 +10,19 @@ export default function ContactPage() {
 
             <main className="flex-1 pt-24 px-6 md:px-10">
                 {/* Header */}
-                <section className="py-12 relative overflow-hidden">
-                    {/* Ambient Glow */}
-                    <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-accent/5 rounded-full blur-[100px] pointer-events-none" />
+                <section className="bg-surface py-24 px-6 md:px-10 overflow-hidden relative border-b border-white/5 film-grain">
+                    <div className="absolute inset-0 cinematic-gradient z-10" />
+                    <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[150px] pointer-events-none z-10" />
 
-                    <div className="container mx-auto relative z-10">
+                    <div className="container mx-auto relative z-20">
                         <div className="flex flex-col lg:flex-row gap-20 items-start">
-                            <div className="lg:w-1/2 space-y-8">
+                            <div className="lg:w-1/2 space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-1000">
                                 <h2 className="text-xs font-black uppercase tracking-[0.4em] text-accent">Contact us</h2>
-                                <h1 className="text-8xl md:text-[10rem] font-black uppercase tracking-tighter text-white leading-[0.85]">
+                                <h1 className="text-5xl md:text-8xl font-black uppercase tracking-tighter text-white leading-[0.85]">
                                     Get In <br /> Touch
                                 </h1>
                             </div>
-                            <div className="lg:w-1/2 lg:pt-32">
+                            <div className="lg:w-1/2 lg:pt-32 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500">
                                 <p className="text-xl md:text-2xl text-white/50 leading-relaxed font-bold uppercase tracking-tight max-w-md">
                                     Whether you have a question, a prayer request, or want to learn more about our church, we're here for you.
                                 </p>

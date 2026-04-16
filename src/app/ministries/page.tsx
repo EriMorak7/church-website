@@ -20,13 +20,14 @@ export default function MinistriesPage() {
 
             <main className="flex-1 pt-24">
                 {/* Header */}
-                <section className="bg-surface py-20 border-b border-white/5 relative overflow-hidden">
-                    <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[150px] pointer-events-none" />
-                    <div className="container mx-auto px-6 md:px-10 relative z-10">
+                <section className="bg-surface py-24 border-b border-white/5 relative overflow-hidden film-grain">
+                    <div className="absolute inset-0 cinematic-gradient z-10" />
+                    <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[150px] pointer-events-none z-10" />
+                    <div className="container mx-auto px-6 md:px-10 relative z-20">
                         <div className="max-w-3xl">
-                            <h2 className="text-xs font-black uppercase tracking-[0.4em] text-accent mb-4">Ministries</h2>
-                            <h1 className="font-sans text-5xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6 leading-[0.9]">Our Ministries</h1>
-                            <p className="text-xl text-white/50 leading-relaxed">
+                            <h2 className="text-xs font-black uppercase tracking-[0.4em] text-accent mb-4 animate-in fade-in slide-in-from-bottom-4 duration-1000">Ministries</h2>
+                            <h1 className="font-sans text-4xl md:text-6xl font-black uppercase tracking-tighter text-white mb-6 leading-[0.9] animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">Our Ministries</h1>
+                            <p className="text-xl text-white/50 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500">
                                 At Christ Heritage, there&apos;s a place for everyone to serve and be served.
                                 Explore our different ministry areas and find where you can plug in.
                             </p>
@@ -41,7 +42,7 @@ export default function MinistriesPage() {
                             {ministries.map((ministry) => {
                                 const Icon = iconMap[ministry.icon] || HelpCircle;
                                 return (
-                                    <div key={ministry.title} className="group p-8 bg-surface border border-white/5 hover:border-accent/20 transition-all duration-500">
+                                    <div key={ministry.title} className="group p-8 bg-surface border border-white/5 hover:border-accent/20 transition-all duration-500 hover:shadow-[0_0_80px_rgba(200,169,96,0.02)] animate-in fade-in slide-in-from-bottom-8 duration-1000">
                                         <div className="flex items-center space-x-4 mb-6">
                                             <div className="p-3 border border-white/10 group-hover:bg-accent group-hover:border-accent transition-all duration-300">
                                                 <Icon className="h-6 w-6 text-white/60 group-hover:text-primary transition-colors duration-300" />

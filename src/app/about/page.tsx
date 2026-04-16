@@ -21,14 +21,11 @@ export default function AboutPage() {
                         />
                     </div>
                     <div className="absolute bottom-0 left-1/3 w-[500px] h-[200px] bg-accent/10 rounded-full blur-[120px] pointer-events-none z-10" />
-                    <div className="container relative z-20 px-6 text-center">
-                        <div className="flex justify-center mb-8">
-                            <div className="w-16 h-[1px] bg-accent" />
-                        </div>
-                        <h1 className="text-6xl md:text-9xl font-black uppercase tracking-tighter text-white mb-6">
+                    <div className="relative z-20 text-center px-6">
+                        <h1 className="text-5xl md:text-8xl font-black uppercase tracking-tighter text-white mb-6 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
                             Our Story
                         </h1>
-                        <p className="text-xl md:text-2xl font-medium text-white/60 max-w-2xl mx-auto leading-relaxed">
+                        <p className="text-xl md:text-2xl font-medium text-white/60 max-w-2xl mx-auto leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500">
                             A community where faith meets real life. Dedicated to loving God and serving our neighbors since 2005.
                         </p>
                     </div>
@@ -40,7 +37,7 @@ export default function AboutPage() {
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                             <div>
                                 <h2 className="text-sm font-bold uppercase tracking-[0.3em] text-accent mb-4">Our Vision & Mission</h2>
-                                <h3 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white leading-[0.9] mb-8">
+                                <h3 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-white leading-[0.9] mb-8">
                                     A People of Purpose,<br />Power, and Praise.
                                 </h3>
                                 <div className="space-y-12 mb-12">
@@ -108,7 +105,7 @@ export default function AboutPage() {
                     <div className="container mx-auto px-6 md:px-10">
                         <div className="max-w-4xl mb-24">
                             <h2 className="text-sm font-bold uppercase tracking-[0.3em] text-accent mb-8">What We Believe</h2>
-                            <h3 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.9] text-white">
+                            <h3 className="text-4xl md:text-7xl font-black uppercase tracking-tighter leading-[0.9] text-white">
                                 Rooted in Faith,<br />Anchor for the Soul.
                             </h3>
                         </div>
