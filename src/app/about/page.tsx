@@ -22,7 +22,7 @@ export default function AboutPage() {
                     </div>
                     <div className="absolute bottom-0 left-1/3 w-[500px] h-[200px] bg-accent/10 rounded-full blur-[120px] pointer-events-none z-10" />
                     <div className="relative z-20 text-center px-6">
-                        <h1 className="text-5xl md:text-8xl font-black uppercase tracking-tighter text-white mb-6 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
+                        <h1 className="text-4xl sm:text-6xl md:text-8xl font-black uppercase tracking-tighter text-white mb-6 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 text-balance">
                             Our Story
                         </h1>
                         <p className="text-xl md:text-2xl font-medium text-white/60 max-w-2xl mx-auto leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500">

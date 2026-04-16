@@ -37,7 +37,7 @@ export function PastorsSection() {
                                 <h2 className="text-sm font-black uppercase tracking-[0.5em] text-accent">Our Leadership</h2>
                                 <div className="w-12 h-[1px] bg-accent/30" />
                             </div>
-                            <h3 className="font-sans text-7xl md:text-9xl font-black uppercase tracking-tighter text-white leading-[0.85]">
+                            <h3 className="font-sans text-5xl md:text-7xl lg:text-9xl font-black uppercase tracking-tighter text-white leading-[0.85] text-balance">
                                 Meet Our <br /> Pastors
                             </h3>
                         </div>

@@ -120,7 +120,7 @@ export default function SermonsPage() {
                                 <div className="lg:w-5/12 space-y-10">
                                     <div className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-1000">
                                         <h2 className="text-xs font-black uppercase tracking-[0.4em] text-accent">Latest Message</h2>
-                                        <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-[0.9] text-white">
+                                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tighter leading-[1.0] text-white text-balance">
                                             {latestSermon.title}
                                         </h1>
                                     </div>

@@ -18,7 +18,7 @@ export default function ContactPage() {
                         <div className="flex flex-col lg:flex-row gap-20 items-start">
                             <div className="lg:w-1/2 space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-1000">
                                 <h2 className="text-xs font-black uppercase tracking-[0.4em] text-accent">Contact us</h2>
-                                <h1 className="text-5xl md:text-8xl font-black uppercase tracking-tighter text-white leading-[0.85]">
+                                <h1 className="text-3xl sm:text-5xl md:text-8xl font-black uppercase tracking-tighter text-white leading-[0.85] text-balance">
                                     Get In <br /> Touch
                                 </h1>
                             </div>
@@ -45,19 +45,19 @@ export default function ContactPage() {
                                     <div className="space-y-16">
                                         <div className="space-y-4">
                                             <p className="text-sm font-black uppercase tracking-[0.3em] text-white/30">Address</p>
-                                            <p className="text-3xl md:text-4xl font-black uppercase tracking-tighter text-white leading-tight max-w-sm">
+                                            <p className="text-xl sm:text-3xl md:text-4xl font-black uppercase tracking-tighter text-white leading-tight max-w-sm">
                                                 {churchInfo.address}
                                             </p>
                                         </div>
                                         <div className="space-y-4">
                                             <p className="text-sm font-black uppercase tracking-[0.3em] text-white/30">Phone</p>
-                                            <p className="text-3xl md:text-4xl font-black uppercase tracking-tighter text-white leading-tight">
+                                            <p className="text-xl sm:text-3xl md:text-4xl font-black uppercase tracking-tighter text-white leading-tight">
                                                 {churchInfo.phone}
                                             </p>
                                         </div>
                                         <div className="space-y-4">
                                             <p className="text-sm font-black uppercase tracking-[0.3em] text-white/30">Email</p>
-                                            <p className="text-3xl md:text-4xl font-black uppercase tracking-tighter text-accent leading-tight lowercase">
+                                            <p className="text-xl sm:text-3xl md:text-4xl font-black uppercase tracking-tighter text-accent leading-tight lowercase">
                                                 {churchInfo.email}
                                             </p>
                                         </div>

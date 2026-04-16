@@ -16,7 +16,7 @@ export default function PlanVisitPage() {
                     <div className="container mx-auto px-6 md:px-10 relative z-20">
                         <div className="max-w-3xl">
                             <h2 className="text-xs font-black uppercase tracking-[0.4em] text-accent mb-4 animate-in fade-in slide-in-from-bottom-4 duration-1000">Plan Your Visit</h2>
-                            <h1 className="font-sans text-4xl md:text-6xl font-black uppercase tracking-tighter text-white mb-6 leading-[0.9] animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
+                            <h1 className="font-sans text-3xl sm:text-4xl md:text-6xl font-black uppercase tracking-tighter text-white mb-6 leading-[0.9] animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 text-balance">
                                 We&apos;re Expecting You!
                             </h1>
                             <p className="text-xl text-white/50 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500">

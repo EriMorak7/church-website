@@ -26,7 +26,7 @@ export default function MinistriesPage() {
                     <div className="container mx-auto px-6 md:px-10 relative z-20">
                         <div className="max-w-3xl">
                             <h2 className="text-xs font-black uppercase tracking-[0.4em] text-accent mb-4 animate-in fade-in slide-in-from-bottom-4 duration-1000">Ministries</h2>
-                            <h1 className="font-sans text-4xl md:text-6xl font-black uppercase tracking-tighter text-white mb-6 leading-[0.9] animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">Our Ministries</h1>
+                            <h1 className="font-sans text-3xl sm:text-4xl md:text-6xl font-black uppercase tracking-tighter text-white mb-6 leading-[0.9] animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 text-balance">Our Ministries</h1>
                             <p className="text-xl text-white/50 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500">
                                 At Christ Heritage, there&apos;s a place for everyone to serve and be served.
                                 Explore our different ministry areas and find where you can plug in.

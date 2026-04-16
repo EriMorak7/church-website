@@ -18,7 +18,7 @@ export default function GivePage() {
                     <div className="container mx-auto relative z-20">
                         <div className="max-w-3xl space-y-6">
                             <h2 className="text-xs font-black uppercase tracking-[0.3em] text-accent animate-in fade-in slide-in-from-bottom-4 duration-1000">Generosity</h2>
-                            <h1 className="text-4xl md:text-7xl font-black uppercase tracking-tighter leading-[0.9] text-white animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
+                            <h1 className="text-3xl sm:text-4xl md:text-7xl font-black uppercase tracking-tighter leading-[0.9] text-white animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 text-balance">
                                 Trusting God <br /> With Our <br /> Resources
                             </h1>
                             <p className="text-xl text-white/50 max-w-xl leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500">

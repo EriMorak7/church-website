@@ -61,17 +61,13 @@ export function Hero() {
                         <div className="w-16 h-[1px] bg-accent animate-shimmer" />
                     </div>
 
-                    <div className="space-y-6">
-                        <span className="inline-block text-sm font-black uppercase tracking-[0.5em] text-accent animate-in fade-in slide-in-from-bottom-4 duration-1000">
-                            Now Gathering In Person & Online
-                        </span>
-                        <h1 className="font-nunito tracking-tighter uppercase leading-[1.1] text-white min-h-[2.2em] text-[clamp(0.7rem,3.5vw,2rem)] sm:text-[clamp(1.2rem,3.8vw,3rem)] md:text-[clamp(2rem,4.5vw,4.5rem)] lg:text-[clamp(3rem,8vw,6rem)]">
-                            <span className="font-black relative mb-4 inline-block">
+                    <div className="space-y-6 text-center">
+                        <h1 className="font-nunito tracking-tighter uppercase text-white mx-auto max-w-5xl text-balance">
+                            <span className="block text-base md:text-xl lg:text-2xl font-black text-accent mb-4 tracking-[0.3em] opacity-90 animate-in fade-in slide-in-from-bottom-4 duration-1000">
                                 {line1.displayedText}
-                                {!line1.isComplete && <span className="absolute -right-1 top-0 w-[1px] h-full bg-accent animate-pulse" />}
+                                {!line1.isComplete && <span className="inline-block w-[2px] h-[0.8em] bg-accent ml-1 animate-pulse" />}
                             </span>
-                            <br /> 
-                            <span className="font-black whitespace-nowrap relative">
+                            <span className="block text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black leading-tight relative whitespace-nowrap">
                                 {line2.displayedText}
                                 {line1.isComplete && !line2.isComplete && <span className="absolute -right-2 top-0 w-[2px] h-full bg-accent animate-pulse" />}
                             </span>
